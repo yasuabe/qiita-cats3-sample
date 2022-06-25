@@ -35,7 +35,7 @@ object greet:
     Now[F].time map greetingOf
 
 object GreeterDemo extends IOApp.Simple:
-  import greet._
+  import greet.*
 
   given Now[IO] with
     def time: IO[LocalTime] = IO.delay(LocalTime.now)

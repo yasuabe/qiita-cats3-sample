@@ -10,7 +10,7 @@ import org.scalacheck.Prop.*
 import org.scalacheck.cats.implicits.*
 
 class GreetSuit extends ScalaCheckSuite:
-  import greet._
+  import greet.*
 
   test("与えられた時刻があいさつに正しく対応付けられる") {
     List(

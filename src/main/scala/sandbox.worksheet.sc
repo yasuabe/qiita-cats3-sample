@@ -1,7 +1,7 @@
 import cats.Applicative
 import cats.data.OptionT
-import cats.syntax.option._
-import cats.syntax.applicative._
+import cats.syntax.option.*
+import cats.syntax.applicative.*
 import scala.annotation.tailrec
 
 def pure[F[_]]: Applicative[F] ?=> [A] => A => OptionT[F, A] =

@@ -1,9 +1,9 @@
-import interesting_type_classes.{ given, _ }
+import interesting_type_classes.{ given, * }
 import cats.data.Chain
 import cats.Eval
-import cats.syntax.option._
-import cats.syntax.bifoldable._
-import cats.syntax.bitraverse._
+import cats.syntax.option.*
+import cats.syntax.bifoldable.*
+import cats.syntax.bitraverse.*
 
 val tc1: TupleChain[Char, Double] = Chain(('a', 0.1), ('b', 0.2), ('c', 0.3))
 val tc2: TupleChain[Char, Double] = Chain(('a', 1.5), ('b', -2.5))

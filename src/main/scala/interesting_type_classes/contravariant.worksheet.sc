@@ -1,5 +1,5 @@
 import cats.Contravariant
-import cats.implicits._
+import cats.syntax.contravariant.*
 
 case class Money(amount: Int)
 case class Earnings(basic: Money)
@@ -26,4 +26,3 @@ val deductionsAmount = (_: Salary).deductions.tax
 
 val earnings         = (_: Salary).earnings
 (nonNegative contramap basic contramap earnings) validate salary
-

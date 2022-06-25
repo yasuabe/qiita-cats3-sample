@@ -15,9 +15,9 @@ given Arrow[SimpleFunc] with
 // Category インスタンスは Arrow に含まれる
 
 // 3. Some Arrow Operations
-import cats.syntax.strong._
-import cats.syntax.arrow._
-import cats.syntax.compose._
+import cats.syntax.strong.*
+import cats.syntax.arrow.*
+import cats.syntax.compose.*
 
 def arr[F[_, _]: Arrow, A, B](f: A => B): F[A, B] = Arrow[F] lift f
 

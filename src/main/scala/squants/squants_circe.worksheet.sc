@@ -1,10 +1,10 @@
 import scala.util.{Failure, Try}
-import cats.syntax.either._
-import cats.syntax.apply._
-import io.circe._
-import io.circe.generic.auto._
+import cats.syntax.either.*
+import cats.syntax.apply.*
+import io.circe.*
+import io.circe.generic.auto.*
 import io.circe.parser.parse
-import io.circe.refined._
+import io.circe.refined.*
 import eu.timepit.refined.types.string.NonEmptyString
 import squants.market.{Money, Price}
 import squants.space.Volume

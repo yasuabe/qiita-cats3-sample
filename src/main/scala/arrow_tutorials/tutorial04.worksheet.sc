@@ -4,10 +4,10 @@ import cats.data.Kleisli
 
 sealed case class SimpleFunc[A, B](runF: A => B)
 
-import cats.syntax.arrow._
-import cats.syntax.compose._
-import cats.syntax.flatMap._
-import cats.syntax.semigroup._
+import cats.syntax.arrow.*
+import cats.syntax.compose.*
+import cats.syntax.flatMap.*
+import cats.syntax.semigroup.*
 
 def arr[F[_, _]: Arrow, A, B](f: A => B): F[A, B] = Arrow[F] lift f
 def split[F[_, _]: Arrow, A]: F[A, (A, A)] = arr(x => (x, x))

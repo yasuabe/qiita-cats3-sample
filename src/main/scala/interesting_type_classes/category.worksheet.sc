@@ -1,7 +1,8 @@
 import cats.arrow.Category
 import cats.data.{Chain, Kleisli, Writer}
-import cats.syntax.writer._
-import cats.syntax.compose._
+import cats.syntax.functor.*
+import cats.syntax.writer.*
+import cats.syntax.compose.*
 
 type ChainWriter[T] = Writer[Chain[String], T]
 type KWriter[A, B]  = Kleisli[ChainWriter, A, B]
@@ -10,9 +11,9 @@ type KWriter[A, B]  = Kleisli[ChainWriter, A, B]
 //   def id[A]: KWriter[A, A] = Kleisli[ChainWriter, A, A] { _.writer(Chain.empty) }
 //   def compose[A, B, C](f: KWriter[B, C], g: KWriter[A, B]): KWriter[A, C] = f compose g
 
-def lift[A, B](f: A => B) = Kleisli[ChainWriter, A, B] {
-  a => Chain(s"$a").tell map (_ => f(a))
-}
+def lift[A, B](f: A => B) =
+  Kleisli[ChainWriter, A, B](a => Chain(s"$a").tell as f(a))
+
 val d2s: KWriter[Double, String] = lift(s => s"$s%")
 val s2n: KWriter[String, Int]    = lift(_.length)
 val n2d: KWriter[Int, Double]    = lift(_ / 100.0)

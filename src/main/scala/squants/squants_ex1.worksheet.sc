@@ -1,6 +1,6 @@
 // 3https://qiita.com/yasuabe2613/items/3c3220d7005678822c25
 
-import squants.mass.MassConversions._
+import squants.mass.MassConversions.*
 
 val m1 = 185.pounds
 // m1: Mass = 185.0 lb
@@ -8,13 +8,13 @@ val (q, u) = m1.toTuple // 必要なら数値と単位文字列に分けるこ�
 // q: Double = 185.0
 // u: String = lb
 
-import squants.market.MoneyConversions._
+import squants.market.MoneyConversions.*
 
 val s5 = 5.dollars
 // s5: Money = 5 USD
 
 // Analysis Patterns 3.2
-import squants.space.LengthConversions._
+import squants.space.LengthConversions.*
 import squants.space.{Inches, Feet, Millimeters}
 
 val f2i = 1.feet in Inches
@@ -27,7 +27,7 @@ val i2mm = 1.inches in Millimeters // 25.4000508 mm
 val f2mm = 1.feet   in Millimeters // 304.8006096 mm
 
 // Analysis Patterns 3.3
-import squants.space.AreaConversions._
+import squants.space.AreaConversions.*
 
 150.squareYards // 150.0 yd²
 
@@ -38,8 +38,8 @@ import squants.space.AreaConversions._
 // 150.squareYards / 1.grams     // コンパイルできない
 
 import squants.motion.{Acceleration, EarthGravities}
-import squants.motion.AccelerationConversions._
-import squants.time.TimeConversions._
+import squants.motion.AccelerationConversions.*
+import squants.time.TimeConversions.*
 
 val g = EarthGravities(1)     // 重力加速度
 // g: Acceleration = 1.0 g

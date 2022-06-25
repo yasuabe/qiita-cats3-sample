@@ -1,9 +1,9 @@
 import cats.arrow.Arrow
 import cats.data.{Cokleisli, NonEmptyList}
-import cats.instances.function._
-import cats.syntax.compose._
-import cats.syntax.strong._
-import cats.syntax.arrow._
+import cats.instances.function.*
+import cats.syntax.compose.*
+import cats.syntax.strong.*
+import cats.syntax.arrow.*
 
 val A = Arrow[Function]
 given Arrow[Function] = A

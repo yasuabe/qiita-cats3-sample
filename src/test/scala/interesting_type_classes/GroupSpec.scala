@@ -4,7 +4,7 @@ import cats.kernel.laws.discipline.GroupTests
 import cats.{ Eq, Group }
 import org.scalacheck.{ Arbitrary, Gen }
 import munit.DisciplineSuite
-import Amida._
+import Amida.*
 
 opaque type Amida = List[Int]
 

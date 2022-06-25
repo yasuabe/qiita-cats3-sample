@@ -125,7 +125,7 @@ object DataSource2 {
 
 def program2(implicit I : Interacts[CatsApp], D : DataSource[CatsApp], D2 : DataSource2[CatsApp]): Free[CatsApp, Unit] = {
 
-  import I._, D._, D2._
+  import I.*, D.*, D2.*
 
   for {
     cat <- ask("What's the kitty's name?")
@@ -167,7 +167,7 @@ object InMemoryDatasource2Interpreter extends (Data2Op ~> Id) {
 
 
 val interpreter: CatsApp ~> Id = InMemoryDatasourceInterpreter or (ConsoleCatsInterpreter or InMemoryDatasource2Interpreter)
-import DataSource._, Interacts._
+import DataSource.*, Interacts.*
 val evaled: Unit = program2.foldMap(interpreter)
 
 1 + 1

@@ -1,11 +1,11 @@
 import cats.Alternative
-import cats.syntax.apply._
-import cats.syntax.semigroupk._
-import cats.syntax.functor._
-import cats.syntax.option._
-import cats.instances.option._
-import cats.syntax.traverse._
-import cats.instances.list._
+import cats.syntax.apply.*
+import cats.syntax.semigroupk.*
+import cats.syntax.functor.*
+import cats.syntax.option.*
+import cats.instances.option.*
+import cats.syntax.traverse.*
+import cats.instances.list.*
 
 trait Div[A] extends Function1[Int, Option[A]]:
   def apply(n: Int): Option[A]

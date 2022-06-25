@@ -1,5 +1,5 @@
 import squants.market.{JPY, MoneyContext, USD}
-import squants.market.MoneyConversions._
+import squants.market.MoneyConversions.*
 
 val rate = USD / 112.14.yen
 // r: CurrencyExchangeRate = USD/JPY 112.14
@@ -14,7 +14,7 @@ given MoneyContext =
 10.dollars in JPY
 // 1121.4 JPY
 
-import squants.space.VolumeConversions._
+import squants.space.VolumeConversions.*
 
 // 原油価格 1バレル（４２ガロン） につき 64.39 USドル
 val oilPrice = 64.39.dollars / 42.gallons

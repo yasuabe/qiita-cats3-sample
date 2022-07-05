@@ -1,4 +1,5 @@
 val scala3Version = "3.1.3"
+val catsVersion = "2.8.0"
 
 lazy val root = project
   .in(file("."))
@@ -10,9 +11,9 @@ lazy val root = project
     scalacOptions ++= List("-Ykind-projector:underscores"),
 
     libraryDependencies ++= List(
-      "org.typelevel"     %% "cats-core"           % "2.6.1",
-      "org.typelevel"     %% "cats-free"           % "2.7.0",
-      "org.typelevel"     %% "cats-effect"         % "3.3.11",
+      "org.typelevel"     %% "cats-core"           % catsVersion,
+      "org.typelevel"     %% "cats-free"           % catsVersion,
+      "org.typelevel"     %% "cats-effect"         % "3.3.12",
       "org.typelevel"     %% "shapeless3-deriving" % "3.1.0",
       "eu.timepit"        %% "refined"             % "0.9.29",
       "org.typelevel"     %% "algebra"             % "2.7.0",

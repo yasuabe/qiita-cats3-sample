@@ -4,3 +4,4 @@ metals.sbt
 .bloop
 .vscode
 .bsp/
+*sandbox*

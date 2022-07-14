@@ -8,7 +8,10 @@ lazy val root = project
     version := "0.1.0-SNAPSHOT",
 
     scalaVersion := scala3Version,
-    scalacOptions ++= List("-Ykind-projector:underscores"),
+    scalacOptions ++= List(
+      "-features",
+      "-Ykind-projector:underscores"
+    ),
 
     libraryDependencies ++= List(
       "org.typelevel"     %% "cats-core"           % catsVersion,
@@ -23,6 +26,7 @@ lazy val root = project
       "io.circe"          %% "circe-refined"       % "0.14.2",
       "io.circe"          %% "circe-generic"       % "0.14.2",
       "org.typelevel"     %% "cats-laws"           % "2.7.0",
+      "dev.optics"        %% "monocle-core"        % "3.1.0",
       "org.typelevel"     %% "algebra-laws"        % "2.7.0"  % Test,
       "org.scalameta"     %% "munit"               % "0.7.29" % Test,
       "org.scalacheck"    %% "scalacheck"          % "1.16.0" % Test,

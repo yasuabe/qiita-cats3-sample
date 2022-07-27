@@ -1,4 +1,4 @@
-import representable_functor.RepresentableLazyList.given
+import representable_functor.given
 import cats.syntax.representable.*
 
 val index = LazyList.continually("abc".to(LazyList)).flatten.index

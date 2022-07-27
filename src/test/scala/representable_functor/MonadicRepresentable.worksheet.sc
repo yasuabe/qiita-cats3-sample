@@ -2,7 +2,7 @@ import cats.{Functor, Monoid, Representable}
 import cats.instances.stream._
 import cats.syntax.representable._
 import representable_functor.Triple
-import representable_functor.Triple.given
+import representable_functor.given
 
 type Sign = "minus" | "zero" | "plus"
 

@@ -1,5 +1,7 @@
 val scala3Version = "3.1.3"
 val catsVersion = "2.8.0"
+val http4sVersion = "0.23.14"
+val tapirVersion = "1.0.3"
 
 lazy val root = project
   .in(file("."))
@@ -28,6 +30,12 @@ lazy val root = project
       "io.circe"          %% "circe-generic"         % "0.14.2",
       "org.typelevel"     %% "cats-laws"             % "2.7.0",
       "dev.optics"        %% "monocle-core"          % "3.1.0",
+      "org.http4s"        %% "http4s-core"           % http4sVersion,
+      "org.http4s"        %% "http4s-dsl"            % http4sVersion,
+      "org.http4s"        %% "http4s-ember-server"   % http4sVersion,
+      "com.softwaremill.sttp.tapir" %% "tapir-core"              % tapirVersion,
+      "com.softwaremill.sttp.tapir" %% "tapir-http4s-server"     % tapirVersion,
+      "com.softwaremill.sttp.tapir" %% "tapir-swagger-ui-bundle" % tapirVersion,
       "org.typelevel"     %% "algebra-laws"          % "2.7.0"  % Test,
       "org.scalameta"     %% "munit"                 % "0.7.29" % Test,
       "org.scalacheck"    %% "scalacheck"            % "1.16.0" % Test,

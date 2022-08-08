@@ -30,6 +30,7 @@ lazy val root = project
       "io.circe"          %% "circe-generic"         % "0.14.2",
       "org.typelevel"     %% "cats-laws"             % "2.7.0",
       "dev.optics"        %% "monocle-core"          % "3.1.0",
+      "dev.optics"        %% "monocle-macro"         % "3.1.0",
       "org.http4s"        %% "http4s-core"           % http4sVersion,
       "org.http4s"        %% "http4s-dsl"            % http4sVersion,
       "org.http4s"        %% "http4s-ember-server"   % http4sVersion,

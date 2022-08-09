@@ -34,6 +34,7 @@ lazy val root = project
       "org.http4s"        %% "http4s-core"           % http4sVersion,
       "org.http4s"        %% "http4s-dsl"            % http4sVersion,
       "org.http4s"        %% "http4s-ember-server"   % http4sVersion,
+      "dev.zio"           %% "zio"                   % "2.0.0",
       "com.softwaremill.sttp.tapir" %% "tapir-core"              % tapirVersion,
       "com.softwaremill.sttp.tapir" %% "tapir-http4s-server"     % tapirVersion,
       "com.softwaremill.sttp.tapir" %% "tapir-swagger-ui-bundle" % tapirVersion,
